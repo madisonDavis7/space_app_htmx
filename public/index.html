@@ -56,53 +56,62 @@
     </div>
   </nav>
   <div>
-    <!-- Page 1 -->
-    <section class="main-page">
-      <div class="main-cont">
-        <h1 class="title-txt">Welcome to</h1>
-        <div class="wave-container">
-          <h1 class="wave-text">
-            <span>C</span>
-            <span>E</span>
-            <span>L</span>
-            <span>E</span>
-            <span>S</span>
-            <span>T</span>
-            <span>I</span>
-            <span>A</span>
-          </h1>
+    <div id="main-sections">
+
+      <!-- Page 1 -->
+      <section class="main-page">
+        <div class="main-cont">
+          <h1 class="title-txt">Welcome to</h1>
+          <div class="wave-container">
+            <h1 class="wave-text">
+              <span>C</span>
+              <span>E</span>
+              <span>L</span>
+              <span>E</span>
+              <span>S</span>
+              <span>T</span>
+              <span>I</span>
+              <span>A</span>
+            </h1>
+          </div>
         </div>
-      </div>
 
-    </section>
+      </section>
 
-    <!-- Page 2 -->
-    <section class="nav-page">
-      <h1 class="nav-txt">Navigation</h1>
-      <div class="planet-btns">
-        <button class="planet-btn mercury" hx-get="/mercury.html" hx-target="#content"></button>
-        <button class="planet-btn venus" hx-get="/venus.html" hx-target="#content"></button>
-        <button class="planet-btn earth" hx-get="/earth.html" hx-target="#content"></button>
-        <button class="planet-btn mars" hx-get="/mars.html" hx-target="#content"></button>
-        <button class="planet-btn jupiter" hx-get="/jupiter.html" hx-target="#content"></button>
-        <button class="planet-btn saturn" hx-get="/saturn.html" hx-target="#content"></button>
-        <button class="planet-btn uranus" hx-get="/uranus.html" hx-target="#content"></button>
-        <button class="planet-btn neptune" hx-get="/neptune.html" hx-target="#content"></button>
+      <!-- Page 2 -->
+      <section class="nav-page">
+        <h1 class="nav-txt">Navigation</h1>
+        <div class="planet-btns">
+          <!-- using htmx so need to hide other sections when button is clicked -->
+          <button class="planet-btn mercury" hx-get="/mercury.html" hx-target="#content" hx-trigger="click"
+            hx-on="htmx:afterRequest: document.getElementById('main-sections').style.display = 'none'; document.getElementById('content').style.display = 'block';"
+            </button>
+            <button class="planet-btn venus" hx-get="/venus.html" hx-target="#content"></button>
+            <button class="planet-btn earth" hx-get="/earth.html" hx-target="#content"></button>
+            <button class="planet-btn mars" hx-get="/mars.html" hx-target="#content"></button>
+            <button class="planet-btn jupiter" hx-get="/jupiter.html" hx-target="#content"></button>
+            <button class="planet-btn saturn" hx-get="/saturn.html" hx-target="#content"></button>
+            <button class="planet-btn uranus" hx-get="/uranus.html" hx-target="#content"></button>
+            <button class="planet-btn neptune" hx-get="/neptune.html" hx-target="#content"></button>
+        </div>
 
+      </section>
 
-      </div>
-      <div id="content">
-        <!-- Content will be loaded here -->
-      </div>
-    </section>
+      <!-- Page 3 -->
+      <section class="iss-page">
+        <div class="main-cont">
 
-    <!-- Page 3 -->
-    <section class="iss-page">
-      <div class="main-cont">
+        </div>
+        <h1 class="title-txt">See Where the ISS is Located Currently</h1>
+      </section>
+    </div>
 
-      </div>
-      <h1 class="title-txt">See Where the ISS is Located Currently</h1>
-    </section>
+  </div>
+  <div id="content" style="display: none;">
+    <button
+      onclick="document.getElementById('main-sections').style.display = 'block'; document.getElementById('content').style.display = 'none';">
+      Back
+    </button>
   </div>
 </body>
 

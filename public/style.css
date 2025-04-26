@@ -201,3 +201,128 @@ section {
     width: 170px;
     margin-bottom: 40px;
 }
+
+/* planet pages styling */
+/* styling for the planet pages */
+.planet-back {
+    background-color: #0d0c0d;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+    transition: color 0.5s;
+}
+
+.hist-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    min-height: 10vh;
+    width: 60vw;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.facts-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
+    width: 60vw;
+    min-height: 10vh;
+    margin-top: 20px;
+    margin-bottom: 10%;
+}
+
+.facts-cont>div {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.planet_img.earth,
+.planet_img.mars,
+.planet_img.mercury,
+.planet_img.venus {
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+}
+
+.planet_img.jupiter,
+.planet_img.neptune,
+.planet_img.uranus {
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+}
+
+.planet_img.saturn {
+    padding: 20px;
+    width: 500px;
+    height: 300px;
+}
+
+.planet-img {
+    transition: transform 0.3s;
+}
+
+.planet-img:hover {
+    transform: scale(1.1);
+}
+
+/* text hovering */
+.title.earth:hover {
+    color: #80afdd;
+}
+
+.title.venus:hover {
+    color: #b67323;
+}
+
+.title.jupiter:hover {
+    color: #a27c5d;
+}
+
+.title.mars:hover {
+    color: #5f1001;
+}
+
+.title.mercury:hover {
+    color: #797979;
+}
+
+.title.neptune:hover {
+    color: #07478c;
+}
+
+.title.saturn:hover {
+    color: #ccc285;
+}
+
+.title.uranus:hover {
+    color: #6c86e1;
+}
