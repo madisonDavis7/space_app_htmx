@@ -1,9 +1,109 @@
-html {
+html,
+body {
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* no
+     scrolling on x-axis */
 }
 
+section {
+    margin: 0;
+    padding: 0;
+}
+
+/* home page */
 .main-page {
     background-image: url('/images/background.jpg');
     background-position: center;
     background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main-cont {
+    text-align: center;
+    z-index: 1;
+    color: white;
+}
+
+
+.wave-text span {
+    display: inline-block;
+    font-size: 5rem;
+    color: white;
+    animation: wave 2s ease-in-out infinite;
+}
+
+.wave-text span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.wave-text span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.wave-text span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.wave-text span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.wave-text span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.wave-text span:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.wave-text span:nth-child(7) {
+    animation-delay: 1.4s;
+}
+
+.wave-text span:nth-child(8) {
+    animation-delay: 1.6s;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+        /* Adjust height of the wave */
+    }
+}
+
+/*nav page */
+
+.nav-page {
+    background-color: #000000;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* iss page */
+.iss-page {
+    background-image: url('/images/background.jpg');
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
