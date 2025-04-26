@@ -43,14 +43,14 @@
           Menu
         </button>
         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="menuDropdown">
-          <li><a class="dropdown-item" href="#mercury">Mercury</a></li>
-          <li><a class="dropdown-item" href="#venus">Venus</a></li>
-          <li><a class="dropdown-item" href="#earth">Earth</a></li>
-          <li><a class="dropdown-item" href="#mars">Mars</a></li>
-          <li><a class="dropdown-item" href="#jupiter">Jupiter</a></li>
-          <li><a class="dropdown-item" href="#saturn">Saturn</a></li>
-          <li><a class="dropdown-item" href="#uranus">Uranus</a></li>
-          <li><a class="dropdown-item" href="#neptune">Neptune</a></li>
+          <li><a class="dropdown-item" hx-get="/mercury.html" hx-target="#content">Mercury</a></li>
+          <li><a class="dropdown-item" hx-get="/venus.html" hx-target="#content">Venus</a></li>
+          <li><a class="dropdown-item" hx-get="/earth.html" hx-target="#content">Earth</a></li>
+          <li><a class="dropdown-item" hx-get="/mars.html" hx-target="#content">Mars</a></li>
+          <li><a class="dropdown-item" hx-get="/jupiter.html" hx-target="#content">Jupiter</a></li>
+          <li><a class="dropdown-item" hx-get="/saturn.html" hx-target="#content">Saturn</a></li>
+          <li><a class="dropdown-item" hx-get="/uranus.html" hx-target="#content">Uranus</a></li>
+          <li><a class="dropdown-item" hx-get="/neptune.html" hx-target="#content">Neptune</a></li>
         </ul>
       </div>
     </div>
@@ -90,6 +90,9 @@
         <button class="planet-btn neptune" hx-get="/neptune.html" hx-target="#content"></button>
 
 
+      </div>
+      <div id="content">
+        <!-- Content will be loaded here -->
       </div>
     </section>
 
