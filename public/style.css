@@ -4,8 +4,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    /* no
-     scrolling on x-axis */
+    /* no scrolling on x-axis */
 }
 
 section {
@@ -13,8 +12,32 @@ section {
     padding: 0;
 }
 
+/* text */
+.title-txt {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.nav-txt {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.iss-txt {
+    text-align: center;
+    font-size: 2rem;
+}
+
+
 /* home page */
-.main-page {
+.main-page,
+.iss-page {
     background-image: url('/images/background.jpg');
     background-position: center;
     background-size: cover;
@@ -85,25 +108,95 @@ section {
     }
 }
 
-/*nav page */
-
+/* Nav Page */
 .nav-page {
-    background-color: #000000;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    background-color: #0d0c0d;
+    color: white;
     position: relative;
+    padding: 0;
 }
 
-/* iss page */
-.iss-page {
-    background-image: url('/images/background.jpg');
-    height: 100vh;
-    width: 100vw;
+.planet-btns {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 120px;
+}
+
+.planet-btn {
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 1;
+    /* Add transition for smooth effect */
+
+}
+
+.planet-btn:hover {
+    transform: scale(1.1);
+}
+
+/* planet buttons */
+.planet-btn.mercury {
+    background-image: url('/images/mercury.png');
+    height: 80px;
+    width: 80px
+}
+
+.planet-btn.venus {
+    background-image: url('./images/venus.png');
+    height: 100px;
+    width: 100px;
+}
+
+.planet-btn.earth {
+    background-image: url('./images/earth.png');
+    height: 150px;
+    width: 150px;
+}
+
+.planet-btn.mars {
+    background-image: url('./images/mars.png');
+    height: 175px;
+    width: 175px;
+}
+
+.planet-btn.jupiter {
+    background-image: url('./images/jupiter.jpg');
+    height: 300px;
+    width: 300px;
+}
+
+.planet-btn.saturn {
+    background-image: url('./images/saturn.png');
+    background-size: contain;
+    height: 375px;
+    width: 375px;
+}
+
+.planet-btn.uranus {
+    background-image: url('./images/uranus.png');
+    height: 200px;
+    width: 200px;
+}
+
+.planet-btn.neptune {
+    background-image: url('./images/neptune.png');
+    height: 170px;
+    width: 170px;
 }
