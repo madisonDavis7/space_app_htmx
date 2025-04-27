@@ -1,19 +1,23 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * const {onCall} = require("firebase-functions/v2/https");
- * const {onDocumentWritten} = require("firebase-functions/v2/firestore");
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
+async function fetchISSData() {
+    try {
+        // Fetch data from the API
+        const response = await fetch('https://api.wheretheiss.at/v1/satellites/25544');
+        const data = await response.json();
 
-const {onRequest} = require("firebase-functions/v2/https");
-const logger = require("firebase-functions/logger");
+        // Update the latitude and longitude elements
+        document.getElementById('latitude').textContent = data.latitude.toFixed(2);
+        document.getElementById('longitude').textContent = data.longitude.toFixed(2);
+    } catch (error) {
+        console.error('Error fetching ISS data:', error);
+    }
+}
 
-// Create and deploy your first functions
-// https://firebase.google.com/docs/functions/get-started
+//add listeners so when button clicked its updated
+document.addEventListener('DOMContentLoaded', () => {
+    const issButton = document.getElementById('iss-button');
+    if (issButton) {
+        issButton.addEventListener('click', fetchISSData);
+    }
+});
 
-// exports.helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+
