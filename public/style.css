@@ -151,6 +151,11 @@ section {
     transform: scale(1.1);
 }
 
+.planet-btn:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
 /* planet buttons */
 .planet-btn.mercury {
     background-image: url('/images/mercury.png');
@@ -270,6 +275,7 @@ section {
     width: 50px;
     height: 50px;
     padding: 20px;
+    border: #07478c 1px solid;
 }
 
 .planet_img.jupiter,

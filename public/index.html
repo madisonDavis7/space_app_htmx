@@ -49,14 +49,54 @@
           Menu
         </button>
         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="menuDropdown">
-          <li><a class="dropdown-item" hx-get="/mercury.html" hx-target="#content">Mercury</a></li>
-          <li><a class="dropdown-item" hx-get="/venus.html" hx-target="#content">Venus</a></li>
-          <li><a class="dropdown-item" hx-get="/earth.html" hx-target="#content">Earth</a></li>
-          <li><a class="dropdown-item" hx-get="/mars.html" hx-target="#content">Mars</a></li>
-          <li><a class="dropdown-item" hx-get="/jupiter.html" hx-target="#content">Jupiter</a></li>
-          <li><a class="dropdown-item" hx-get="/saturn.html" hx-target="#content">Saturn</a></li>
-          <li><a class="dropdown-item" hx-get="/uranus.html" hx-target="#content">Uranus</a></li>
-          <li><a class="dropdown-item" hx-get="/neptune.html" hx-target="#content">Neptune</a></li>
+          <li><a class="dropdown-item" href="#" hx-get="/mercury.html" hx-target="#content" hx-trigger="click"
+              aria-label="Go to Mercury page"
+              hx-on="htmx:afterRequest: document.getElementById('main-sections').style.display = 'none'; document.getElementById('content').style.display = 'block';">
+              Mercury
+            </a>
+          </li>
+          <li><a class="dropdown-item" href="#" hx-get="/venus.html" hx-target="#content" hx-trigger="click"
+              aria-label="Go to Venus page"
+              hx-on="htmx:afterRequest: document.getElementById('main-sections').style.display = 'none'; document.getElementById('content').style.display = 'block';">
+              Venus
+            </a>
+          </li>
+          <li><a class="dropdown-item" href="#" hx-get="/earth.html" hx-target="#content" hx-trigger="click"
+              aria-label="Go to Earth page"
+              hx-on="htmx:afterRequest: document.getElementById('main-sections').style.display = 'none'; document.getElementById('content').style.display = 'block';">
+              Earth
+            </a>
+          </li>
+          <li><a class="dropdown-item" href="#" hx-get="/mars.html" hx-target="#content" hx-trigger="click"
+              aria-label="Go to Mars page"
+              hx-on="htmx:afterRequest: document.getElementById('main-sections').style.display = 'none'; document.getElementById('content').style.display = 'block';">
+              Mars
+            </a>
+          </li>
+          <li><a class="dropdown-item" href="#" hx-get="/jupiter.html" hx-target="#content" hx-trigger="click"
+              aria-label="Go to Jupiter page"
+              hx-on="htmx:afterRequest: document.getElementById('main-sections').style.display = 'none'; document.getElementById('content').style.display = 'block';">
+              Jupiter
+            </a>
+          </li>
+          <li><a class="dropdown-item" href="#" hx-get="/saturn.html" hx-target="#content" hx-trigger="click"
+              aria-label="Go to Saturn page"
+              hx-on="htmx:afterRequest: document.getElementById('main-sections').style.display = 'none'; document.getElementById('content').style.display = 'block';">
+              Saturn
+            </a>
+          </li>
+          <li><a class="dropdown-item" href="#" hx-get="/uranus.html" hx-target="#content" hx-trigger="click"
+              aria-label="Go to Uranus page"
+              hx-on="htmx:afterRequest: document.getElementById('main-sections').style.display = 'none'; document.getElementById('content').style.display = 'block';">
+              Uranus
+            </a>
+          </li>
+          <li><a class="dropdown-item" href="#" hx-get="/neptune.html" hx-target="#content" hx-trigger="click"
+              aria-label="Go to Neptune page"
+              hx-on="htmx:afterRequest: document.getElementById('main-sections').style.display = 'none'; document.getElementById('content').style.display = 'block';">
+              Neptune
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -72,12 +112,12 @@
             <h1 class="wave-text">
               <span>C</span>
               <span>E</span>
-              <span>L</span>
-              <span>E</span>
-              <span>S</span>
-              <span>T</span>
-              <span>I</span>
-              <span>A</span>
+              <span'L< /span>
+                <span>E</span>
+                <span>S</span>
+                <span'T< /span>
+                  <span>I</span>
+                  <span>A</span>
             </h1>
           </div>
         </div>
@@ -90,28 +130,35 @@
         <div class="planet-btns">
           <!-- using htmx so need to hide other sections when button is clicked -->
           <button class="planet-btn mercury" hx-get="/mercury.html" hx-target="#content" hx-trigger="click"
+            aria-label="Go to Mercury page"
             hx-on="htmx:afterRequest: document.getElementById('main-sections').style.display = 'none'; document.getElementById('content').style.display = 'block';"
             </button>
             <button class="planet-btn venus" hx-get="/venus.html" hx-target="#content" hx-trigger="click"
+              aria-label="Go to Venus page"
               hx-on="htmx:afterRequest: document.getElementById('main-sections').style.display = 'none'; document.getElementById('content').style.display = 'block';"
               </button>
               <button class="planet-btn earth" hx-get="/earth.html" hx-target="#content" hx-trigger="click"
+                aria-label="Go to Earth page"
                 hx-on="htmx:afterRequest: document.getElementById('main-sections').style.display = 'none'; document.getElementById('content').style.display = 'block';"
                 </button>
                 <button class="planet-btn mars" hx-get="/mars.html" hx-target="#content" hx-trigger="click"
+                  aria-label="Go to Mars page"
                   hx-on="htmx:afterRequest: document.getElementById('main-sections').style.display = 'none'; document.getElementById('content').style.display = 'block';"
                   </button>
                   <button class="planet-btn jupiter" hx-get="/jupiter.html" hx-target="#content" hx-trigger="click"
+                    aria-label="Go to Jupiter page"
                     hx-on="htmx:afterRequest: document.getElementById('main-sections').style.display = 'none'; document.getElementById('content').style.display = 'block';"
                     </button>
                     <button class="planet-btn saturn" hx-get="/saturn.html" hx-target="#content" hx-trigger="click"
+                      aria-label="Go to Saturn page"
                       hx-on="htmx:afterRequest: document.getElementById('main-sections').style.display = 'none'; document.getElementById('content').style.display = 'block';"
                       </button>
                       <button class="planet-btn uranus" hx-get="/uranus.html" hx-target="#content" hx-trigger="click"
+                        aria-label="Go to Uranus page"
                         hx-on="htmx:afterRequest: document.getElementById('main-sections').style.display = 'none'; document.getElementById('content').style.display = 'block';"
                         </button>
                         <button class="planet-btn neptune" hx-get="/neptune.html" hx-target="#content"
-                          hx-trigger="click"
+                          hx-trigger="click" aria-label="Go to Neptune page"
                           hx-on="htmx:afterRequest: document.getElementById('main-sections').style.display = 'none'; document.getElementById('content').style.display = 'block';"
                           </button>
         </div>
