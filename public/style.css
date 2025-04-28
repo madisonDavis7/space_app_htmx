@@ -152,8 +152,8 @@ section {
     transform: scale(1.1);
 }
 
-.planet-btn:focus {
-    outline: 2px solid #ffffff;
+button.planet-btn:focus {
+    outline: 4px solid #ffffff;
     outline-offset: 4px;
 }
 
