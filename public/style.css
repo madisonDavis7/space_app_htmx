@@ -269,32 +269,50 @@ section {
     padding: 10px;
 }
 
-.planet_img.earth,
-.planet_img.mars,
-.planet_img.mercury,
-.planet_img.venus {
-    width: 50px;
-    height: 50px;
-    padding: 20px;
-    border: #07478c 1px solid;
-}
-
-.planet_img.jupiter,
-.planet_img.neptune,
-.planet_img.uranus {
-    padding: 20px;
-    width: 300px;
-    height: 300px;
-}
-
-.planet_img.saturn {
-    padding: 20px;
-    width: 500px;
-    height: 300px;
-}
-
 .planet-img {
     transition: transform 0.3s;
+    display: flex;
+    justify-content: center;
+}
+
+div img.planet-img.mercury {
+    width: 150px;
+    height: 150px;
+}
+
+div img.planet-img.venus {
+    width: 150px;
+    height: 150px;
+}
+
+div img.planet-img.earth {
+    width: 200px;
+    height: 200px;
+}
+
+div img.planet-img.mars {
+    width: 150px;
+    height: 150px;
+}
+
+div img.planet-img.jupiter {
+    width: 400px;
+    height: 400px;
+}
+
+div img.planet-img.saturn {
+    width: 400px;
+    height: 300px;
+}
+
+div img.planet-img.uranus {
+    width: 200px;
+    height: 200px;
+}
+
+div img.planet-img.neptune {
+    width: 250px;
+    height: 250px;
 }
 
 .planet-img:hover {
