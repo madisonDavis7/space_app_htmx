@@ -1,12 +1,15 @@
 -- Hosted on Firebase --
 
-#HTMX/ JS/ HTML/ CSS
+--> HTMX/ JS/ HTML/ CSS
 
-#Same Celestia app as before just using HTMX this time
+Same Celestia app as before just using HTMX this time
 
-#Features
+-- Features --
 
 -accessibility
--secure?
+
+-secure
+
 -hits a database (writes to it)
+
 -hits an api (whereistheissnow)
