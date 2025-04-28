@@ -2,7 +2,7 @@
 async function fetchISSData() {
     try {
         // Fetch data from the Firebase Function
-        const response = await fetch('/getISSData'); // Adjust the path based on your Firebase setup
+        const response = await fetch('http://127.0.0.1:5001/fnof-stack-a31a1/us-central1/getISSData'); // Adjust the path based on your Firebase setup
         const data = await response.json();
 
         // Update the latitude and longitude elements
