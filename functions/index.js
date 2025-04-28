@@ -1,6 +1,7 @@
 const functions = require('firebase-functions');
 const fetch = require('node-fetch'); // Install this package using `npm install node-fetch`
 
+//server side code 
 exports.getISSData = functions.https.onRequest(async (req, res) => {
     try {
         const response = await fetch('https://api.wheretheiss.at/v1/satellites/25544');
