@@ -7,7 +7,7 @@ async function fetchISSData() {
         issButton.disabled = true;
 
         // Fetch data from the Firebase Function
-        const response = await fetch('http://127.0.0.1:5001/fnof-stack-a31a1/us-central1/getISSData');
+        const response = await fetch('https://us-central1-fnof-stack-a31a1.cloudfunctions.net/getISSData');
         if (!response.ok) {
             const error = await response.json();
             throw new Error(error.error || 'Failed to fetch ISS data how tragic');

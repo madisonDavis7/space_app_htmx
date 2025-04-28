@@ -2,7 +2,7 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 const fetch = require('node-fetch');
 const cors = require("cors")({
-    origin: 'https://fof-stack.web.app', // Replace with your allowed origin
+    origin: 'https://fnof-stack-a31a1.web.app', // Update to match your frontend's URL
     allowedHeaders: [
         'Content-Type',
         'HX-Current-Url',
