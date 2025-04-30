@@ -163,11 +163,14 @@
       <section class="iss-page">
         <div class="main-cont">
           <h1 class="title-txt">See Where the ISS is Located Currently</h1>
-          <div class="iss-cont">
-            <h2><i>Latitude:</i> <span id="latitude"></span></h2>
-            <h2><i>Longitude:</i> <span id="longitude"></span></h2>
+          <div id="iss-location">
+            <!-- The ISS location data will be dynamically injected here -->
           </div>
-          <button id="iss-btn" class="iss-btn" aria-label="Update the ISS's location">Locate</button>
+          <button id="iss-btn" class="iss-btn" aria-label="Update the ISS's location"
+            hx-get="https://us-central1-fnof-stack-a31a1.cloudfunctions.net/getISSData" hx-target="#iss-location"
+            hx-swap="innerHTML">
+            Locate
+          </button>
         </div>
       </section>
     </div>
