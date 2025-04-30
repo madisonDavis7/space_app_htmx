@@ -43,10 +43,11 @@ exports.getISSData = functions.https.onRequest((req, res) => {
             });
 
             //respond with an html
+            //2 decimal places for latitude and longitude
             const htmlResponse = `
             <div>
                 <h2>Current ISS Location</h2>
-                <p id="latitude">Latitude: ${data.latitude.toFixed(2)}</p>
+                <p id="latitude">Latitude: ${data.latitude.toFixed(3)}</p>
                 <p id="longitude">Longitude: ${data.longitude.toFixed(2)}</p>
             </div>
             `;
