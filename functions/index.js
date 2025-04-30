@@ -46,8 +46,8 @@ exports.getISSData = functions.https.onRequest((req, res) => {
             const htmlResponse = `
             <div>
                 <h2>Current ISS Location</h2>
-                <p id="latitude">Latitude: ${data.latitude}</p>
-                <p id="longitude">Longitude: ${data.longitude}</p>
+                <p id="latitude">Latitude: ${data.latitude.toFixed(2)}</p>
+                <p id="longitude">Longitude: ${data.longitude.toFixed(2)}</p>
             </div>
             `;
 
@@ -55,7 +55,7 @@ exports.getISSData = functions.https.onRequest((req, res) => {
             res.status(200).send(htmlResponse);
         } catch (error) {
             console.error('Sad times, error fetching ISS data:', error);
-            res.status(500).send({ error: 'Failed to fetch ISS data :(' });
+            res.status(500).send('<p>Failed to fetch ISS data :(</p>');
         }
     });
 });
